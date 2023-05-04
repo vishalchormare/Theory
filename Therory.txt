@@ -1,0 +1,132 @@
+JDK
+// .java file is the source file containing the source code
+// .java file is taken by compiler present in JDK and the source code gets compiled
+//  the source code(.java file) is converted into bytecode(.class file) by javac compiler
+//  Inside JRE , JVM is present
+//  bytecode(.class file) is loaded in the JVM memory by the class loader
+//  At the same time , static variable also gets memory in the method area.
+//  the bytecode gets converted into machine readable code by JVM(interpretation)
+//  this machine readable code is finally executed
+//  JVM calls the main method
+
+Supper Key word and This Keyword
+
+        // These two can only be present as the first line of code in the constructor
+        // super(); => calls the Parent class constructor from Child class constructor
+        // this(); => within in the same class, calling one constructor into another
+        B7 obj1 = new B7(4, 8);
+
+        // this keyword  => referring current class object
+        // super keyword => referring parent class object
+
+
+Abstrack Class 
+// Abstract class
+// We will use abstract class when we know partial implementations
+// Abstract class is used for 0% to 100% Abstraction.
+// Abstract class contains Abstract methods(methods without body) as well as concrete method(methods with implementation)
+// We need to mention abstract keyword while declaring abstract methods. Abstract methods cannot be private.
+// Abstract class can contain any kind of variables.
+// The child class of abstract class can override either all or some of the abstract methods. It is not mandatory to override all the abstract methods.
+// Abstract class contains a constructor because the variables of abstract class has to be initialized.
+// We cannot create an object of Abstract class
+
+interface
+
+// Interface
+// We will use interface when we don't know any of the implementations
+// Interface is used for 100% Abstraction.
+// Interface contains Abstract methods
+// The abstract methods are bydefault public and abstract in an interface. So we don't need to mention public and abstract keywords while declaring.
+// Interface can contain variables but they will always be public,static and final.So we don't need to mention public,static and final keywords while declaring.
+// From Java 1.8V onwards, Interface can contain static methods as well as default methods.
+// From Java 1.9V onwards, Interface can contain private methods also.
+// private ,static and default methods must contain the implementation. These methods cannot be abstract(without body).
+// The implementation class of an interface must override all the abstract methods of the interface . It is mandatory.
+// Interface does not contain a constructor
+// We cannot create an object of Interface
+// private method can only be called inside the interface through default method implementation
+// default method can be overridden in the implementation classes.
+// static method can only be called using Interface name.
+
+Association 
+
+// Inheritence => IS-A Relationship
+// Association => HAS-A Relationship
+// By creating objects inside a class
+// Eg->  AddressBook HAS Contacts
+//   ->  Building HAS Rooms
+//   ->  Teacher HAS Students
+//   ->  Team HAS Player
+
+// 2 types -> Composition -> strong relationship -> Container object and contained object cannot exist individually without each other
+//           Eg:- Room cannot exist without building
+//                Class and Method
+
+//         -> Aggregation
+//         Eg:- Player can exist without Team
+
+
+Collection Framework
+
+
+        // Collections => For storing objects
+
+        // Iterable -> Collection -> List , Set , Queue
+        // => List -> ArrayList, LinkedList , Vector, Stack
+        // => Set -> HashSet, LinkedHashSet,  => SortedSet -> TreeSet
+        // => Queue -> PriorityQueue,  => Dequeue -> ArrayDequeue
+
+        // => Map  -> HashMap , LinkedHashMap , => SortedMap -> TreeMap
+
+        // HashMap -> K,V => Keys are unique , Insertion order not maintained
+        // LinkedHashMap -> K,V => Keys are unique , Insertion order is maintained
+        // TreeMap -> K,V => Elements are sorted in ascending order according to the keys.
+
+        // ArrayList => Dynamic Array , duplicates allowed , insertion order not maintained
+        // LinkedList => Doubly Linked List , duplicates are
+
+        // HashSet => HashMap , Duplicates are not allowed , Insertion order is not maintained
+        // Data inserted in HashSet is stored as a key in HashMap
+
+        // LinkedHashSet => LinkedHashMap , Duplicates are not allowed , Insertion order is maintained
+
+        // TreeSet => TreeMap , Duplicates are not allowed , Elements are sorted in TreeSet
+
+// Lambda Expression
+// To implement Lambda expression , A functional interface is required
+// Through Lambda expression we can provide the implementation of single abstract method of the functional interface
+// Reduces the code.
+
+StreAM API
+// To do manipulation on collection of data in java 8 stream API concept is there.
+// There are methods like filter, map, forEach, reduce etc. in stream API
+// There are intermediate operations and terminal operations in stream api
+
+// Exception => Any error which occurs at run-time and causes abnormal termination of the program
+// 2 types -> Checked Exception and Unchecked Exception
+// Checked Exception -> Exception which will be checked by the compiler at the time of compilation is called checked exception
+//                      thats why it is called Compile-time exception
+//                      To handle checked exception we can use : 1> try-catch block
+//                                                               2> throws keyword
+
+
+// Unchecked Exception -> Exception which occurs at run-time is called unchecked exception.
+//                        These are not checked by the compiler at the time of compilation.
+//                        To handle unchecked exception we can use: try-catch block
+
+
+// RuntimeException   IOException      InterruptedException....          VMError LinkageError AssertionError...
+// StackOverflow      // EOFException
+// OutofMemoryError   // FileNotFoundException..
+// AE
+// NPE(NullPointerException)
+// CCE(ClassCastException)
+// IndexOutofBoundException
+   // AIOOBE
+   // SIOOBE
+// IllegalArgumentException
+// NumberFormatException
+
+  // finally block is used for clean up activities like closing the resources.
+    // the code in finally block will always execute whether exception occur or not occur.
